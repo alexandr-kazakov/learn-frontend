@@ -42,6 +42,94 @@
 ## HTML
 
 1. Рекомендую писать классы по БЭМ, можно освоить за один вечер.
+2. Cемантическая верстка. Рекомендую использовать сразу специальные теги. в том числе и html5, а не делать все div-ами.
+Примеры кода, которые показывают насколько лучше читаемость у кода со специальными тегами:
+   1. ```html
+<!-- ##### 1 ##### -->
+
+<article class="article">
+  <header class="article__header">
+    <h1>Заголовок статьи</h1>
+    <p>Подзаголовок статьи</p>
+  </header>
+  <div class="article__body">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <figure>
+      <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="Классная картинка">
+      <figcaption>Рис1. Логотип MDN</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <figure>
+      <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="Классная картинка">
+      <figcaption>Рис1. Логотип MDN</figcaption>
+    </figure>
+    <blockquote cite="http://developer.mozilla.org">
+      <p>This is a quotation taken from the Mozilla Developer Center.</p>
+    </blockquote>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+  </div>
+</article>
+
+<!-- ##### 2 ##### -->
+
+<div class="article">
+  <div class="article__header">
+    <h1>Заголовок статьи</h1>
+    <p>Подзаголовок статьи</p>
+  </div>
+  <div class="article__body">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <div>
+      <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="Картинка">
+      <span>Рис1. Логотип MDN</span>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+    <div>
+      <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="Картинка">
+      <span>Рис1. Логотип MDN</span>
+    </div>
+    <div cite="http://developer.mozilla.org">
+      <p>This is a quotation taken from the Mozilla Developer Center.</p>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia eaque asperiores, laborum magni repudiandae dolore, totam voluptatem delectus sapiente ullam possimus incidunt nulla, sint consectetur adipisci dolor eos expedita?</p>
+  </div>
+</div>
+```
+   2. ```html
+<!-- ##### 1 ##### -->
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ##### 2 ##### -->
+
+<div class="header">
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
 
 ## CSS
 
@@ -52,8 +140,25 @@
 4. Путь в стилях идет от родителя, то есть: .header .header__top{...} или .nav .nav__items{...}. 
 Родителя прописывайте, а не так что просто: .nav__items{...}
 5. Хорошо весь CSS код записывать в алфавитном порядке. В таком коде гораздо легче разобраться, а еще, это как знак качества. Рекомендую сразу приучить себя так писать, по началу используйте обычную таблицу с алфавитом(EN), как досказку. В дальнейшем вы запомните порядок и будете писать без подсказок.
+6. Анимация. На начальном этапе стоит про это забыть и сконцентрироваться на обучении JavaScript. Большинство сайтов нет вообще никакой анимации. Многие новички пытаются ее добавить(и я когда-то), а не стоит. Потому что в первую очередь должна быть высокая скорость загрузки страницы, а если ты подключаешь разные там библиотеки, то для отображения страницы придется загрузать их код. Также рассуждая глобально, есть два типа анмиации: первую назову пионерскойнапример библиотека Animate.css), а вторая пишется индивидуально для конкретного случая. Первая почти никому не нужна, а вторая сложна. Итого: про это стоит пока забыть и не пытаться добавлять анимацию(в том числе при скролле страницы). Нужно настроиться на высокую скорость загрузки страницы и чистый код. Стоит стараться на сайт подключать как можно меньше всяких там библиотек.
 
 ## Современные возможности
 
 Здесь постараюсь писать, что нужно использовать в настоящее момент, чтобы не тратить время на изучение устаревших технологий:
 1. Используйте flex и не используйте float. Раньше, в эпоху Bootstrap-3, для построения сетки использовались float-ы, так как flex-ы старые браузеры не поддерживали. Можно увидеть массовое использование float-ов в верстке, в разных там учебниках/видео/курсах, это вчерашний день. С момента прихода Bootstrap-4 преимущественно используются flex-ы. Про float-ы нужно знать и иногда можно их применять, но не более того.
+2. Не использовать Bootstrap-3. В Bootstrap-4 изменились классы у сетки, следовательно, знание Bootstrap-3 вам ничего особенного не даст, стоит сразу учить Bootstrap-4 или актуальную версию(на момент когда вы это читаете).
+
+## Кроссбраузерность
+
+1. Конечно всю верстку проверяем в HTML-валидаторе: https://validator.w3.org/#validate_by_uri
+2. Проверяем скорость загрузки страницы у верстки:
+    - https://developers.google.com/speed/pagespeed/insights/?hl=ru
+    - https://testmysite.withgoogle.com/intl/ru-ru
+
+## Технический стек
+
+### BEM
+
+1. Важный момент в БЭМ. Секция почти никогда не может быть родителем для блока по БЭМ, как нпример здесь: https://i.imgur.com/HsD7DEv.png
+В секцию должна быть возможность переместить любой контент и убрать из нее любой. Что такое секция? - в большинстве случаев это просто обертка, для создания фона и отступов. Почему же она должна быть привязана к содержимому. Содержимое идет отдельно, а секции можно задавать такие классы(я так сам делаю): .about-section. А уже внутри идет .about{.about__top{...}} и так далее, т.е. мы контент можем перемещать в любую секцию. 
+
