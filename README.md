@@ -193,9 +193,9 @@ ___
 Поясняющее видео: https://drive.google.com/file/d/1xrPFn3QGoNrk6Gdi-w7K5p1sj-f4L-S5/view  
 Решение: https://codepen.io/alexandr-kazakov/pen/OqReZv  
 
-2. Стилизуем нашу форму. начнём с полей для ввода(input).
-Поясняющая картинка: http://bit.ly/2TgLvMB 
-Поясняющее видео: https://drive.google.com/file/d/1upYErdmik32YDUCT_WA8_0bRFjVKMwlx/view
+2. Стилизуем нашу форму. начнём с полей для ввода(input).   
+Поясняющая картинка: http://bit.ly/2TgLvMB   
+Поясняющее видео: https://drive.google.com/file/d/1upYErdmik32YDUCT_WA8_0bRFjVKMwlx/view   
   * При наведении на поле, плавно меняется цвет фона и цвет границы, пример: http://bit.ly/2TiIeN7
   * При фокусировке на поле плавно меняется цвет фона и цвет границы, пример: http://bit.ly/2Tilrkr
   * Когда пользователь пишет текст в поле, то цвет введённого текста отличается от цвета текста по умолчанию.
