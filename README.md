@@ -192,3 +192,6 @@ ___
 Поясняющая картинка: http://bit.ly/2VySEVc  
 Поясняющее видео: https://drive.google.com/file/d/1xrPFn3QGoNrk6Gdi-w7K5p1sj-f4L-S5/view  
 В итоге пришлите ссылку на рабочий пример, например на codepen или на страницу на вашем хостинге.  
+Решение: https://codepen.io/alexandr-kazakov/pen/OqReZv  
+
+2.
